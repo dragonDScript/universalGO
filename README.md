@@ -6,6 +6,17 @@ Universal GO is a tool to package Go applications for all platforms.
 
 Try it by git cloning this repo, and running `go run main.go examples/minimalistic/app.zip`. Docs are WIP.
 
+## How to run .ugo files directly
+
+Download the repo and compile universal GO for your platform. Put it in a familiar place. Then open a .ugo file and click `Properties` on Windows:
+
+![image](https://user-images.githubusercontent.com/46191980/157127805-236e74af-36a6-461e-8e13-237b2a40dcc9.png)
+
+Click "Change..." and pick the ugo binary. Now you can run .ugo files from the explorer, taskbar or terminal directly!
+
+![image](https://user-images.githubusercontent.com/46191980/157127907-7e08cb24-6c6b-40c9-8dcf-b500fc912bba.png)
+
+
 ## 📃 File format
 
 The file format is a ZIP file.
