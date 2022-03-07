@@ -19,7 +19,7 @@ func execute(f string) {
 	process := exec.Command(executable, strings.Join(os.Args[1:], " "))
 	process.Stdout = os.Stdout
 	process.Stderr = os.Stderr
-	process.Dir = f
+	process.Dir = filepath.Join(f, "files")
 	err := process.Run()
 	if err != nil {
 		panic(err)
