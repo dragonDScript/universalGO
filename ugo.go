@@ -27,17 +27,38 @@ func execute(f string) {
 }
 
 func main() {
-	loc := os.Args[1]
-	if loc == "" {
-		log.Println("arg location not provided")
+	if len(os.Args) < 2 {
+		log.Println("not enough arguments")
 		return
+	}
+	loc, err := filepath.Abs(os.Args[1])
+	fmt.Println(loc)
+	if err != nil {
+		panic(err)
+	}
+	_, err = os.Stat(loc)
+	if os.IsNotExist(err) {
+		log.Println("file doesn't exist")
+		return
+	}
+	if err != nil {
+		panic(err)
 	}
 	f, err := os.MkdirTemp("", "*")
 	if err != nil {
-		log.Println(err.Error())
-		return
+		panic(err)
 	}
-	unzip(loc, f)
+	_, err = unzip(loc, f)
+	if err != nil {
+		panic(err)
+	}
+	if runtime.GOOS == "linux" || runtime.GOOS == "darwin" {
+		// Make executable
+		err = os.Chmod(filepath.Join(f, runtime.GOOS, runtime.GOARCH, platform.Filename), 01)
+		if err != nil {
+			panic(err)
+		}
+	}
 	execute(f)
 }
 
