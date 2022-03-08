@@ -4,7 +4,7 @@
 
 Universal GO is a tool to package Go applications for all platforms.
 
-Try it by git cloning this repo, and running `go run main.go examples/minimalistic/app.zip`. Docs are WIP.
+Try it by downloading ugo from [GitHub Releases](https://github.com/dragonDScript/universalGO/releases) and placing it in a familiar location. Then Check the below guide for opening .ugo files with ugo. Docs are WIP.
 
 ## How to run .ugo files directly
 
