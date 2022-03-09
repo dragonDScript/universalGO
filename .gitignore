@@ -2,4 +2,3 @@ darwin*
 linux*
 windows*
 *.ugo
-!examples/*/*.ugo
