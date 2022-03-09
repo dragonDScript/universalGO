@@ -32,15 +32,6 @@ func main() {
 		return
 	}
 	loc, err := filepath.Abs(os.Args[1])
-	fmt.Println(loc)
-	if err != nil {
-		panic(err)
-	}
-	_, err = os.Stat(loc)
-	if os.IsNotExist(err) {
-		log.Println("file doesn't exist")
-		return
-	}
 	if err != nil {
 		panic(err)
 	}
