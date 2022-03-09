@@ -45,7 +45,7 @@ func main() {
 	}
 	if runtime.GOOS == "linux" || runtime.GOOS == "darwin" {
 		// Make executable
-		err = os.Chmod(filepath.Join(f, runtime.GOOS, runtime.GOARCH, platform.Filename), 01)
+		err = os.Chmod(filepath.Join(f, runtime.GOOS, runtime.GOARCH, platform.Filename), 0111)
 		if err != nil {
 			panic(err)
 		}
