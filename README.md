@@ -1,6 +1,6 @@
 # Universal GO
 
-## ⚠️ WORK IN PROGRESS, YOU SHOULDN'T USE THIS
+#### ⚠️ Gophers are doing experiments. Use with caution.
 
 Universal GO is a tool to package Go applications for all platforms.
 
