@@ -31,10 +31,4 @@ The file format is a ZIP file.
 - darwin
     - amd64
         - darwin
-- files
-    - file1.png
-    - file2.html
-    - reference these files in your
-    - app by concatenating
-    - working directory and the file
 ```
