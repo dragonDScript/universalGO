@@ -1,0 +1,14 @@
+* {
+    font-family: Helvetica, sans-serif;
+}
+a {
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    border: 1px solid white;
+}
+a:hover {
+    text-decoration: none;
+}
